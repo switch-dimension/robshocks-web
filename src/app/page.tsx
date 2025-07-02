@@ -2,7 +2,6 @@ import {
   Play, 
   Code, 
   Zap, 
-  Users, 
   Youtube, 
   Github, 
   Twitter,
@@ -12,6 +11,7 @@ import {
   ArrowRight,
   Star
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,6 +30,7 @@ export default function Home() {
               <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
               <a href="#content" className="text-gray-300 hover:text-white transition-colors">Content</a>
               <a href="#tutorials" className="text-gray-300 hover:text-white transition-colors">Tutorials</a>
+              <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             </div>
           </div>
@@ -67,13 +68,13 @@ export default function Home() {
                 <Youtube className="w-5 h-5 mr-2" />
                 Subscribe on YouTube
               </a>
-              <a 
-                href="#tutorials" 
+              <Link 
+                href="/blog" 
                 className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/20"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
-                View Tutorials
-              </a>
+                Read Blog
+              </Link>
             </div>
           </div>
         </div>
